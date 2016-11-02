@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+	"authors": [
+	    "RV1971"
+	]
+    },
+    "addpersonalurls-desc": "Fügt den persönlichen URLs Einträge hinzu",
+    "addpersonalurls-preload": "Sie funktioniert genauso wie jede andere Wikiseite, insbesondere sind andere Benutzer möglicherweise in der Lage, sie zu sehen oder zu bearbeiten.",
+    "addpersonalurls-userpages": "Meine Seiten",
+    "addpersonalurls-home": "Home",
+    "addpersonalurls-home-preload": "Sie können diese Seite als persönliche Startseite nutzen.",
+    "addpersonalurls-favorites": "Favoriten",
+    "addpersonalurls-favorites-preload": "Sie können diese Seite zum Speichern Ihrer Favoriten nutzen.",
+    "addpersonalurls-sandbox": "Sandkasten",
+    "addpersonalurls-sandbox-preload": "Sie können diese Seite zum Testen von Wikicode nutzen.",
+    "addpersonalurls-notes": "Notizen",
+    "addpersonalurls-notes-preload": "Sie können diese Seite für persönliche Notizen nutzen."
+}

@@ -1,0 +1,49 @@
+<!-- 
+     page taken from 
+     http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/Configuration
+-->  
+== Configuration ==
+
+=== Table of URLs ===
+
+The additional URLs are defined in the global variable <code>$wgAddPersonalUrlsTable</code>, which you may customize in your <code>LocalSettings.php</code>. A default table is used if you do not provide a custom one. The table is an array where each entry assigns an ''ID'' to a (partial) ''URL'' as follows:
+
+* URLs are inserted after the link to the user's home page, in the order in which they appear in the array.
+* The ''ID'' is the name of a [[#Messages|system message]] used to display the link. AddPersonalUrls is shipped with default messages (in the languages de, en, fr and it) for the links in the default <code>$wgAddPersonalUrlsTable</code>.
+* The ''URL'' is either a page name (without brackets), optionally followed by a '?' and a query string, or an external link. A ''URL'' is recognized an external link iff it contains the string '://'. I'm sure you'll find a better way, so please let me know your ideas.
+* The string <code>$username</code> will be replaced with the current username. Note that in <code>LocalSettings.php</code>, you need to write the ''URL'' within single quotes to avoid that PHP already interprets <code>$username</code> while processing <code>LocalSettings.php</code>, in which case it would evaluate to an empty string.
+
+The default content of <code>$wgAddPersonalUrlsTable</code> is currently as follows:
+
+<syntaxhighlight lang="php">
+$wgAddPersonalUrlsTable = array(
+	'addpersonalurls-userpages' 
+	=> 'Special:PrefixIndex?prefix=$username&namespace=2',
+	'addpersonalurls-home' => 'User:$username/Home',
+	'addpersonalurls-favorites' => 'User:$username/Favorites',
+	'addpersonalurls-sandbox' => 'User:$username/Sandbox',
+	'addpersonalurls-notes' => 'User:$username/Notes'
+);
+</syntaxhighlight>
+
+=== Messages ===
+
+; addpersonalurls-desc: Description of this extension as shown in [[Special:Version]].
+; addpersonalurls-preload: When a user clicks on a personal URL and the corresponding page does not exist, the result is a create-page screen with this text preloaded.
+; addpersonalurls-userpages: Description of the link which displays the subpages of User:$username where $username is the user currently logged in.
+; addpersonalurls-home: Description of the link which displays the subpage User:$username/Home where $username is the user currently logged in.
+; addpersonalurls-home-preload: When a user clicks on the addpersonalurls-home link and the corresponding page does not exist, the result is a create-page screen with the text of the '''addpersonalurls-preload''' message plus this text preloaded.
+; addpersonalurls-favorites: Description of the link which displays the subpage User:$username/Favorites where $username is the user currently logged in.
+; addpersonalurls-favorites-preload: When a user clicks on the addpersonalurls-favorites link and the corresponding page does not exist, the result is a create-page screen with the text of the '''addpersonalurls-preload''' message plus this text preloaded.
+; addpersonalurls-sandbox: Description of the link which displays the subpage User:$username/Sandbox where $username is the user currently logged in.
+; addpersonalurls-sandbox-preload: When a user clicks on the addpersonalurls-sandbox link and the corresponding page does not exist, the result is a create-page screen with the text of the '''addpersonalurls-preload''' message plus this text preloaded.
+; addpersonalurls-notes: Description of the link which displays the subpage User:$username/Notes where $username is the user currently logged in.
+; addpersonalurls-notes-preload: When a user clicks on the addpersonalurls-notes link and the corresponding page does not exist, the result is a create-page screen with the text of the '''addpersonalurls-preload''' message plus this text preloaded.
+
+When a personal page does not exist, the URL opens the page for editing, and the content of the system messages <b>''ID''-preload</b> and '''addpersonalurls-preload''' is preloaded. This will also work for any URLs you add, provided that ''ID'' is equal to <b>addpersonalurls-''subpage_title_in_lowercase''</b>.
+
+=== CSS ===
+
+In the resulting HTML code, each link is wrapped into an &lt;li&gt; element having an id attribute with value <code>pt-''ID''</code>. This is a feature provided by MediaWiki and allows to format personal URLs individually via CSS.
+
+The AddPersonalUrls exension uses this feature to add icons, taken from the [http://commons.wikimedia.org/wiki/Category:Nuvola_icons Wikicommons Nuvola icons], to the new links as well as to the existing ones provided by MedaWiki. You can override this with your own CSS.
