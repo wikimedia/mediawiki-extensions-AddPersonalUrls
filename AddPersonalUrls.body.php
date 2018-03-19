@@ -100,22 +100,22 @@ class AddPersonalUrls {
 		}
 
 		$msg1 = wfMessage( 'addpersonalurls-'
-			. strtolower( $title->getSubpageText() ) . '-preload' )->text();
+			. strtolower( $title->getSubpageText() ) . '-preload' );
 
 		/** If the page-specific message does not exist, do not
 		 *	preload anything. */
 		if( !$msg1->exists() )
 			return true;
 
-		$msg2 = wfMessage( 'addpersonalurls-preload' )->text();
+		$msg2 = wfMessage( 'addpersonalurls-preload' );
 
-		$text = "<!-- $msg1";
+		$text = "<!-- {$msg1->text()}";
 
-		if( $msg1 !== '' && $msg2 !== '' ) {
+		if( $msg1->text() !== '' && $msg2->text() !== '' ) {
 			$text .= "\n\n";
 		}
 
-		$text .= "$msg2 -->";
+		$text .= "{$msg2->text()} -->";
 
 		return true;
 	}
@@ -162,7 +162,7 @@ class AddPersonalUrls {
 					$components = explode( '?', $url, 2 );
 					$name = $components[0];
 					$urlaction = isset( $components[1] )
-						? $components[1] : null; 
+						? $components[1] : null;
 
 					$linkedTitle = Title::newFromText( $name );
 					Skin::checkTitle( $linkedTitle, $name );
