@@ -195,4 +195,3 @@ class AddPersonalUrls {
 		return true;
 	}
   }
-?>

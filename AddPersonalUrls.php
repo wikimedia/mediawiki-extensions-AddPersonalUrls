@@ -149,4 +149,3 @@ $wgResourceModules['ext.addPersonalUrls'] = array(
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'AddPersonalUrls'
 );
-?>
