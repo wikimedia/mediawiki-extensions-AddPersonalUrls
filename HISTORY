@@ -1,7 +1,13 @@
-<!-- 
-     page taken from 
-     http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/History 
--->  
+<!--
+     page taken from
+     http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/History
+-->
+
+== Version 1.1.0 ==
+
+=== Configuration changes ===
+
+* The messages are now stored in the [[mw:Localisation file format|new JSON format]].
 
 == Version 1.0.0 ==
 

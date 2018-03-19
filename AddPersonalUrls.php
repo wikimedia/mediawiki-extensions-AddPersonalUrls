@@ -115,7 +115,7 @@ $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'name' => 'AddPersonalUrls',
 	'descriptionmsg' => 'addpersonalurls-desc',
-	'version' => '1.1.0',
+	'version' => '1.1.1',
 	'author' => '[http://www.mediawiki.org/wiki/User:RV1971 RV1971]',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:AddPersonalUrls'
 );
