@@ -11,6 +11,7 @@ The additional URLs are defined in the global variable <code>$wgAddPersonalUrlsT
 * URLs are inserted after the link to the user's home page, in the order in which they appear in the array.
 * The ''ID'' is the name of a [[#Messages|system message]] used to display the link. AddPersonalUrls is shipped with default messages (in the languages de, en, fr and it) for the links in the default <code>$wgAddPersonalUrlsTable</code>.
 * The ''URL'' is either a page name (without brackets), optionally followed by a '?' and a query string, or an external link. A ''URL'' is recognized an external link iff it contains the string '://'. I'm sure you'll find a better way, so please let me know your ideas.
+* The string <code>$username</code> will be replaced with the current username. Note that in <code>LocalSettings.php</code>, you need to write the ''URL'' within single quotes to avoid that PHP already interprets <code>$username</code> while processing <code>LocalSettings.php</code>, in which case it would evaluate to an empty string.
 
 The default content of <code>$wgAddPersonalUrlsTable</code> is currently as follows:
 
