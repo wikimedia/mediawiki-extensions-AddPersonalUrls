@@ -9,3 +9,5 @@ These are the release notes for version 1.2.0. See [[{{NAMESPACE}}:{{BASEPAGENAM
 === Configuration changes ===
 
 The extension is now loaded using the <code>wfLoadExtension()</code> mechanism introduced in MediaWiki 1.25. It is therefore incompatible with older MediaWiki versions.
+
+The replacement of <code>$username</code> in the AddPersonalUrlsTable targets is not supported any more since <code>Special:Mypage</code> can be used instead. If you have customized <code>$wgAddPersonalUrlsTable</code>, replace any occurrence of <code>User:$username<code> by <code>Special:Mypage</code>.

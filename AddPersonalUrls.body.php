@@ -138,8 +138,6 @@ class AddPersonalUrls {
 		global $wgUser;
 		global $wgAddPersonalUrlsTable;
 
-		$username = $wgUser->getName();
-
 		/** Consider logged-in users only. */
 		if ( $wgUser->getID() ) {
 			$pageurl = $title->getLocalURL();

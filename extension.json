@@ -37,10 +37,10 @@
             "value": {
 	        "addpersonalurls-userpages":
 	        "Special:PrefixIndex?prefix=$username&namespace=2",
-	        "addpersonalurls-home": "User:$username/Home",
-	        "addpersonalurls-favorites": "User:$username/Favorites",
-	        "addpersonalurls-sandbox": "User:$username/Sandbox",
-	        "addpersonalurls-notes": "User:$username/Notes"
+	        "addpersonalurls-home": "Special:Mypage/Home",
+	        "addpersonalurls-favorites": "Special:Mypage/Favorites",
+	        "addpersonalurls-sandbox": "Special:Mypage/Sandbox",
+	        "addpersonalurls-notes": "Special:Mypage/Notes"
             }
         }
     },
