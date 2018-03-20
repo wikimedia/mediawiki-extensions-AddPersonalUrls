@@ -3,6 +3,12 @@
      http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/History
 -->
 
+== Version 1.1.1 ==
+
+=== Bug fixes ===
+
+* Check for existence of page-specific preload message now works.
+
 == Version 1.1.0 ==
 
 === Configuration changes ===

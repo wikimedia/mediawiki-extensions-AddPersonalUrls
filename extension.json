@@ -1,0 +1,48 @@
+{
+    "name": "AddPersonalUrls",
+    "version": "1.2.0",
+    "type": "skin",
+    "author": [
+        "[http://www.mediawiki.org/wiki/User:RV1971 RV1971]"
+    ],
+    "descriptionmsg": "dynamicpagelistengine-desc",
+    "url": "https://www.mediawiki.org/wiki/Extension:DynamicPageListEngine",
+    "license-name": "GPL-3.0-or-later",
+    "requires": {
+	"MediaWiki": ">= 1.30.0"
+    },
+    "AutoloadClasses": {
+        "AddPersonalUrls": "AddPersonalUrls.body.php"
+    },
+    "ResourceModules": {
+	"ext.addPersonalUrls": {
+	    "styles": {
+                "css/ext.addPersonalUrls.css": { "media": "screen" }
+            }
+        }
+    },
+    "ResourceFileModulePaths": {
+	"localBasePath": "",
+	"remoteExtPath": "AddPersonalUrls"
+    },
+    "ExtensionFunctions": [ "AddPersonalUrls::init" ],
+    "MessagesDirs": {
+	"AddPersonalUrls": [
+	    "i18n"
+	]
+    },
+    "config": {
+        "AddPersonalUrlsTable": {
+            "description": "Table of URLs to add.",
+            "value": {
+	        "addpersonalurls-userpages":
+	        "Special:PrefixIndex?prefix=$username&namespace=2",
+	        "addpersonalurls-home": "User:$username/Home",
+	        "addpersonalurls-favorites": "User:$username/Favorites",
+	        "addpersonalurls-sandbox": "User:$username/Sandbox",
+	        "addpersonalurls-notes": "User:$username/Notes"
+            }
+        }
+    },
+    "manifest_version": 2
+}
