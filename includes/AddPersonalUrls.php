@@ -91,11 +91,11 @@ class AddPersonalUrls {
 	 * @return *bool* Always TRUE.
 	 */
 	public function onEditFormPreloadText( &$text, Title &$title ) {
-		if( $title->getNamespace() != NS_USER )
+		if ( $title->getNamespace() != NS_USER )
 			return true;
 
 		/** Skip if there is already another preload text. */
-		if( $text ) {
+		if ( $text ) {
 			return true;
 		}
 
@@ -104,14 +104,14 @@ class AddPersonalUrls {
 
 		/** If the page-specific message does not exist, do not
 		 *	preload anything. */
-		if( !$msg1->exists() )
+		if ( !$msg1->exists() )
 			return true;
 
 		$msg2 = wfMessage( 'addpersonalurls-preload' );
 
 		$text = "<!-- {$msg1->text()}";
 
-		if( $msg1->text() !== '' && $msg2->text() !== '' ) {
+		if ( $msg1->text() !== '' && $msg2->text() !== '' ) {
 			$text .= "\n\n";
 		}
 
@@ -149,7 +149,7 @@ class AddPersonalUrls {
 			foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
 				/** Setup URL details, distinguishing between internal
 				 *	and external links. */
-				if( strpos( $url, '://' ) !== false ) {
+				if ( strpos( $url, '://' ) !== false ) {
 					$href = $url;
 					$class = 'external text';
 				} else {
@@ -167,7 +167,7 @@ class AddPersonalUrls {
 					/** If a page does not exist and is not a special
 					 *	page, open it for editing and format it as a
 					 *	link to a new page. */
-					if( !$exists ) {
+					if ( !$exists ) {
 						$urlaction = 'action=edit';
 						$class = 'new';
 					}
@@ -189,4 +189,4 @@ class AddPersonalUrls {
 
 		return true;
 	}
-  }
+}
