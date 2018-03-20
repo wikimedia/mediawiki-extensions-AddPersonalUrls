@@ -17,13 +17,13 @@
     "ResourceModules": {
 	"ext.addPersonalUrls": {
 	    "styles": {
-                "css/ext.addPersonalUrls.css": { "media": "screen" }
+                "ext.addPersonalUrls.css": { "media": "screen" }
             }
         }
     },
     "ResourceFileModulePaths": {
-	"localBasePath": "",
-	"remoteExtPath": "AddPersonalUrls"
+	"localBasePath": "resources/css",
+	"remoteExtPath": "AddPersonalUrls/resources/css"
     },
     "ExtensionFunctions": [ "AddPersonalUrls::init" ],
     "MessagesDirs": {
