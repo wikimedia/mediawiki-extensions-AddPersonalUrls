@@ -1,7 +1,7 @@
-<!-- 
-     page taken from 
+<!--
+     page taken from
      http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/Installation
--->  
+-->
 == Installation ==
 
 {{ExtensionInstall
@@ -10,4 +10,4 @@
 
 To upgrade an existing installation, replace the files with new ones. If you have customized it in any way, check the [[{{NAMESPACE}}:{{BASEPAGENAME}}#Release notes|release notes]] for instructions on configuration changes.
 
-Even though this extension has been tested on MediaWiki 1.21 only, it is likely to work on slightly earlier versions as well.
+Even though this extension has been tested on MediaWiki 1.30 only, it is likely to work on slightly earlier versions as well.
