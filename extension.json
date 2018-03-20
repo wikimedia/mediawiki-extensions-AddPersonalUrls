@@ -12,7 +12,7 @@
 	"MediaWiki": ">= 1.30.0"
     },
     "AutoloadClasses": {
-        "AddPersonalUrls": "AddPersonalUrls.body.php"
+        "AddPersonalUrls": "includes/AddPersonalUrls.php"
     },
     "ResourceModules": {
 	"ext.addPersonalUrls": {
