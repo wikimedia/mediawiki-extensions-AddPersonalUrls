@@ -4,10 +4,4 @@
 -->
 == Installation ==
 
-{{ExtensionInstall
-|download-link=[http://sourceforge.net/projects/mwdatatable/files/misc/AddPersonalUrls-1.1.0.zip/download Download]
-}}
-
-To upgrade an existing installation, replace the files with new ones. If you have customized it in any way, check the [[{{NAMESPACE}}:{{BASEPAGENAME}}#Release notes|release notes]] for instructions on configuration changes.
-
-Even though this extension has been tested on MediaWiki 1.30 only, it is likely to work on slightly earlier versions as well.
+{{TNT|ExtensionInstall|registration = required}}
