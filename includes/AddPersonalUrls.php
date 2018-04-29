@@ -13,7 +13,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @ingroup Extensions
  * @ingroup Extensions-AddPersonalUrls
  *
- * @author [RV1971](http://www.mediawiki.org/wiki/User:RV1971)
+ * @author [RV1971](https://www.mediawiki.org/wiki/User:RV1971)
  *
  */
 
@@ -58,10 +58,10 @@ class AddPersonalUrls {
 
 	/**
 	 * @brief [BeforePageDisplay]
-	 * (http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay) hook.
+	 * (https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay) hook.
 	 *
 	 * Add the [Resource Modules]
-	 * (http://www.mediawiki.org/wiki/$wgResourceModules) to the page.
+	 * (https://www.mediawiki.org/wiki/$wgResourceModules) to the page.
 	 *
 	 * @param[in,out] OutputPage &$out The OutputPage object.
 	 *
@@ -78,7 +78,7 @@ class AddPersonalUrls {
 
 	/**
 	 * @brief [EditFormPreloadText]
-	 * (http://www.mediawiki.org/wiki/Manual:Hooks/EditFormPreloadText) hook.
+	 * (https://www.mediawiki.org/wiki/Manual:Hooks/EditFormPreloadText) hook.
 	 *
 	 * Preload text when creating new pages in the User namespace. See
 	 * @ref $wgAddPersonalUrlsTable for an explanation how the text is
@@ -122,7 +122,7 @@ class AddPersonalUrls {
 
 	/**
 	 * @brief [PersonalUrls]
-	 * (http://www.mediawiki.org/wiki/Manual:Hooks/PersonalUrls) hook.
+	 * (https://www.mediawiki.org/wiki/Manual:Hooks/PersonalUrls) hook.
 	 *
 	 * This is the core of the extension which actually adds the URLs
 	 * to the list of personal URLs.

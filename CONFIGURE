@@ -1,6 +1,6 @@
 <!--
      page taken from
-     http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/Configuration
+     https://www.mediawiki.org/wiki/Extension:AddPersonalUrls/Configuration
 -->
 == Configuration ==
 
@@ -36,4 +36,4 @@ When a personal page does not exist, the URL opens the page for editing, and the
 
 In the resulting HTML code, each link is wrapped into an &lt;li&gt; element having an id attribute with value <code>pt-''ID''</code>. This is a feature provided by MediaWiki and allows to format personal URLs individually via CSS.
 
-The AddPersonalUrls exension uses this feature to add icons, taken from the [http://commons.wikimedia.org/wiki/Category:Nuvola_icons Wikicommons Nuvola icons], to the new links as well as to the existing ones provided by MedaWiki. You can override this with your own CSS.
+The AddPersonalUrls exension uses this feature to add icons, taken from the [https://commons.wikimedia.org/wiki/Category:Nuvola_icons Wikicommons Nuvola icons], to the new links as well as to the existing ones provided by MedaWiki. You can override this with your own CSS.
