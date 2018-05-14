@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Athena in Wonderland"
+			"Athena in Wonderland",
+			"Hamilton Abreu"
 		]
 	},
-	"addpersonalurls-desc": "Adicione algumas entradas aos URLs pessoais",
+	"addpersonalurls-desc": "Adicione algumas entradas aos URL pessoais",
 	"addpersonalurls-preload": "Funciona como qualquer outra página da wiki; em especial, os outros utilizadores podem vê-la ou editá-la.",
 	"addpersonalurls-userpages": "As minhas páginas",
 	"addpersonalurls-home": "Início",
