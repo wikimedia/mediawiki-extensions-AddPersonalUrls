@@ -5,7 +5,7 @@
     "author": [
         "[https://www.mediawiki.org/wiki/User:RV1971 RV1971]"
     ],
-    "descriptionmsg": "dynamicpagelistengine-desc",
+    "descriptionmsg": "addpersonalurls-desc",
     "url": "https://www.mediawiki.org/wiki/Extension:AddPersonalUrls",
     "license-name": "GPL-3.0-or-later",
     "requires": {
