@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Garam"
 		]
 	},
 	"addpersonalurls-desc": "일부 항목을 개인 URL로 추가",
@@ -13,6 +14,6 @@
 	"addpersonalurls-favorites-preload": "즐겨찾기 저장을 위해 이 문서를 사용할 수 있습니다.",
 	"addpersonalurls-sandbox": "연습장",
 	"addpersonalurls-sandbox-preload": "위키 코드 테스트를 위해 이 문서를 사용할 수 있습니다.",
-	"addpersonalurls-notes": "메모",
+	"addpersonalurls-notes": "비고",
 	"addpersonalurls-notes-preload": "개인 메모를 위해 이 문서를 사용할 수 있습니다."
 }
