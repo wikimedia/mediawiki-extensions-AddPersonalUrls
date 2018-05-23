@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"addpersonalurls-userpages": "Moje strony",
+	"addpersonalurls-favorites": "Ulubione",
+	"addpersonalurls-favorites-preload": "Możesz użyć tej strony, aby zapisać Ulubione.",
+	"addpersonalurls-sandbox": "Brudnopis",
+	"addpersonalurls-sandbox-preload": "Możesz użyć tej strony, aby przetestować kod wiki.",
+	"addpersonalurls-notes": "Uwagi"
+}
