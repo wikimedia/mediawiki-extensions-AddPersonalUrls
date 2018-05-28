@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abiyoyo"
+			"Abiyoyo",
+			"Redredsonia"
 		]
 	},
-	"addpersonalurls-sandbox": "Песочница"
+	"addpersonalurls-userpages": "Мои страницы",
+	"addpersonalurls-home": "Главная",
+	"addpersonalurls-sandbox": "Песочница",
+	"addpersonalurls-notes": "Примечания"
 }
