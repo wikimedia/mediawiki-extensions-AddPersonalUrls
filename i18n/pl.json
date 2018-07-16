@@ -5,9 +5,11 @@
 		]
 	},
 	"addpersonalurls-userpages": "Moje strony",
+	"addpersonalurls-home-preload": "Możesz użyć tej strony jako swojej osobistej strony głównej.",
 	"addpersonalurls-favorites": "Ulubione",
 	"addpersonalurls-favorites-preload": "Możesz użyć tej strony, aby zapisać Ulubione.",
 	"addpersonalurls-sandbox": "Brudnopis",
 	"addpersonalurls-sandbox-preload": "Możesz użyć tej strony, aby przetestować kod wiki.",
-	"addpersonalurls-notes": "Uwagi"
+	"addpersonalurls-notes": "Uwagi",
+	"addpersonalurls-notes-preload": "Możesz użyć tej strony do swoich osobistych notatek."
 }
