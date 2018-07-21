@@ -181,7 +181,7 @@ class AddPersonalUrls {
 
 					$href = $linkedTitle->getLocalURL( $urlaction );
 
-					$active = (isset( $class ) && $class == 'new')
+					$active = ( isset( $class ) && $class == 'new' )
 						? $linkedTitle->getLocalURL() == $pageurl
 						: $href == $pageurl;
 				}
