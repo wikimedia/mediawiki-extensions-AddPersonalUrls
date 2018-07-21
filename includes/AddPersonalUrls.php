@@ -63,12 +63,12 @@ class AddPersonalUrls {
 	 * Add the [Resource Modules]
 	 * (https://www.mediawiki.org/wiki/$wgResourceModules) to the page.
 	 *
-	 * @param[in,out] OutputPage &$out The OutputPage object.
+	 * @param OutputPage &$out The OutputPage object.
 	 *
-	 * @param[in,out] Skin &$skin Skin object that will be used to
+	 * @param Skin &$skin Skin object that will be used to
 	 * generate the page.
 	 *
-	 * @return *bool* Always TRUE.
+	 * @return bool Always TRUE.
 	 */
 	public function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$out->addModules( 'ext.addPersonalUrls' );
@@ -84,11 +84,11 @@ class AddPersonalUrls {
 	 * @ref $wgAddPersonalUrlsTable for an explanation how the text is
 	 * composed.
 	 *
-	 * @param[in,out] string &$text Text to prefill edit form with.
+	 * @param string &$text Text to prefill edit form with.
 	 *
-	 * @param[in,out] Title &$title Title of new page (Title Object).
+	 * @param Title &$title Title of new page (Title Object).
 	 *
-	 * @return *bool* Always TRUE.
+	 * @return bool Always TRUE.
 	 */
 	public function onEditFormPreloadText( &$text, Title &$title ) {
 		if ( $title->getNamespace() != NS_USER ) {
@@ -129,11 +129,11 @@ class AddPersonalUrls {
 	 * This is the core of the extension which actually adds the URLs
 	 * to the list of personal URLs.
 	 *
-	 * @param[in,out] array $personal_urls The array of URLs set up so far.
+	 * @param array $personal_urls The array of URLs set up so far.
 	 *
 	 * @param Title $title The Title object of the current article.
 	 *
-	 * @return *bool* Always TRUE.
+	 * @return bool Always TRUE.
 	 */
 
 	public function onPersonalUrls( array &$personal_urls, Title $title ) {
