@@ -91,8 +91,9 @@ class AddPersonalUrls {
 	 * @return *bool* Always TRUE.
 	 */
 	public function onEditFormPreloadText( &$text, Title &$title ) {
-		if ( $title->getNamespace() != NS_USER )
+		if ( $title->getNamespace() != NS_USER ) {
 			return true;
+		}
 
 		/** Skip if there is already another preload text. */
 		if ( $text ) {
@@ -104,8 +105,9 @@ class AddPersonalUrls {
 
 		/** If the page-specific message does not exist, do not
 		 *	preload anything. */
-		if ( !$msg1->exists() )
+		if ( !$msg1->exists() ) {
 			return true;
+		}
 
 		$msg2 = wfMessage( 'addpersonalurls-preload' );
 
