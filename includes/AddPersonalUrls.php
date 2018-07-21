@@ -146,7 +146,7 @@ class AddPersonalUrls {
 
 			/** Extract link to user page in order to keep it as first
 			 *	item. */
-			$urls = array( 'userpage' => array_shift( $personal_urls ) );
+			$urls = [ 'userpage' => array_shift( $personal_urls ) ];
 
 			foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
 				/** Replace $username with actual username. */
