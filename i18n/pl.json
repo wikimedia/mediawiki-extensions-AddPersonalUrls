@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Railfail536"
 		]
 	},
+	"addpersonalurls-desc": "Dodaje nowe linki osobiste",
+	"addpersonalurls-preload": "Ta strona działa jak każdy inny artykuł na wiki; inni użytkownicy mogą zobaczyć i edytować umieszczoną tutaj treść.",
 	"addpersonalurls-userpages": "Moje strony",
+	"addpersonalurls-home": "Główna",
 	"addpersonalurls-home-preload": "Możesz użyć tej strony jako swojej osobistej strony głównej.",
 	"addpersonalurls-favorites": "Ulubione",
 	"addpersonalurls-favorites-preload": "Możesz użyć tej strony, aby zapisać Ulubione.",
