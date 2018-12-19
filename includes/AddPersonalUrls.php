@@ -151,6 +151,13 @@ class AddPersonalUrls {
 			$urls = [ 'userpage' => array_shift( $personal_urls ) ];
 
 			foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
+				/** Ignore items were the target is unset. This allows
+				 * to remove in `LocalSettings.php` items defined in
+				 * extension.json. */
+				if ( !isset( $url ) ) {
+					continue;
+				}
+
 				/** Replace $username with actual username. */
 				$url = str_replace( '$username', $username, $url );
 
