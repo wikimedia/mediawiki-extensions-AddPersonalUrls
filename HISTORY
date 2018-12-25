@@ -1,7 +1,19 @@
 <!--
      page taken from
-     https://www.mediawiki.org/wiki/Extension:AddPersonalUrls/History
+     http://www.mediawiki.org/wiki/Extension:AddPersonalUrls/History
 -->
+
+== Version 1.2.1 ==
+
+=== Configuration changes ===
+
+Allow to deactivate in <code>$wgAddPersonalUrlsTable</code> items predefined in <code>extension.json</code>.
+
+== Version 1.2.0 ==
+
+=== Configuration changes ===
+
+The extension is now loaded using the <code>wfLoadExtension()</code> mechanism introduced in MediaWiki 1.25. It is therefore incompatible with older MediaWiki versions.
 
 == Version 1.1.1 ==
 

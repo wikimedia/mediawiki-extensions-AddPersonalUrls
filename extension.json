@@ -1,6 +1,6 @@
 {
 	"name": "AddPersonalUrls",
-	"version": "1.3.0",
+	"version": "1.2.2beta",
 	"author": [
 		"[https://www.mediawiki.org/wiki/User:RV1971 RV1971]"
 	],
@@ -34,7 +34,7 @@
 		"AddPersonalUrlsTable": {
 			"description": "Table of URLs to add.",
 			"value": {
-				"addpersonalurls-userpages": "Special:PrefixIndex?prefix=$username&namespace=2",
+				"addpersonalurls-userpages": "Special:PrefixIndex?prefix=$username/&namespace=2",
 				"addpersonalurls-home": "Special:Mypage/Home",
 				"addpersonalurls-favorites": "Special:Mypage/Favorites",
 				"addpersonalurls-sandbox": "Special:Mypage/Sandbox",

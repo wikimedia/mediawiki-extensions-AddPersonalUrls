@@ -4,8 +4,8 @@
 -->
 == Release notes ==
 
-These are the release notes for version 1.2.0. See [[{{NAMESPACE}}:{{BASEPAGENAME}}/History]] for older releases.
+These are the release notes for version 1.2.2. See [[{{NAMESPACE}}:{{BASEPAGENAME}}/History]] for older releases.
 
 === Configuration changes ===
 
-The extension is now loaded using the <code>wfLoadExtension()</code> mechanism introduced in MediaWiki 1.25. It is therefore incompatible with older MediaWiki versions.
+Change the default message for <code>addpersonalurls-userpages</code> to <code>Special:PrefixIndex?prefix=$username/&namespace=2</code> as suggested by [[User:Alzi24|Alzi24]].
