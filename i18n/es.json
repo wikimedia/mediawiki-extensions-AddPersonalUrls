@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Carlosmg.dg"
+			"Carlosmg.dg",
+			"Mynor Archila"
 		]
 	},
 	"addpersonalurls-userpages": "Mis páginas",
@@ -12,5 +13,6 @@
 	"addpersonalurls-favorites-preload": "Puedes utilizar esta página para almacenar tus favoritos.",
 	"addpersonalurls-sandbox": "Zona de pruebas",
 	"addpersonalurls-sandbox-preload": "Puedes utilizar esta página para probar código wiki.",
-	"addpersonalurls-notes": "Notas"
+	"addpersonalurls-notes": "Notas",
+	"addpersonalurls-notes-preload": "Puede usar esta página para sus notas personales."
 }
