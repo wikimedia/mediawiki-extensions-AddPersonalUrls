@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nerogaf"
+			"Nerogaf",
+			"Red Winged Duck"
 		]
 	},
+	"addpersonalurls-desc": "Дадае некаторыя элемэнты да пэрсанальных URL-адрасоў",
+	"addpersonalurls-preload": "Гэта працуе, як любая іншая вікістаронка; у прыватнасьці, іншыя ўдзельнікі змогуць бачыць яе і рэдагаваць.",
 	"addpersonalurls-userpages": "Мае старонкі",
 	"addpersonalurls-home": "Дадому",
 	"addpersonalurls-favorites": "Упадабаныя",
