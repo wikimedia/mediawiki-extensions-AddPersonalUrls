@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Patriccck"
+			"Patriccck",
+			"Slepi"
 		]
 	},
 	"addpersonalurls-userpages": "Moje stránky",
 	"addpersonalurls-home": "Hlavní strana",
+	"addpersonalurls-home-preload": "Tuto stránku můžete použít jako svou osobní domovskou stránku.",
 	"addpersonalurls-favorites": "Oblíbené",
 	"addpersonalurls-sandbox": "Pískoviště",
 	"addpersonalurls-sandbox-preload": "Můžete použít tuto stránku pro testování wikitextu.",
