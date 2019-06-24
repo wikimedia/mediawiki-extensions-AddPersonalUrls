@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Suchichi02"
+			"Suchichi02",
+			"神樂坂秀吉"
 		]
 	},
 	"addpersonalurls-userpages": "自分のページ",
-	"addpersonalurls-sandbox": "サンドボックス"
+	"addpersonalurls-home": "ホーム",
+	"addpersonalurls-favorites": "お気に入り",
+	"addpersonalurls-sandbox": "サンドボックス",
+	"addpersonalurls-notes": "注釈"
 }
