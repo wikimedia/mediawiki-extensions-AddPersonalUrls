@@ -2,12 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Suchichi02",
-			"神樂坂秀吉"
+			"神樂坂秀吉",
+			"マツムシ"
 		]
 	},
 	"addpersonalurls-userpages": "自分のページ",
 	"addpersonalurls-home": "ホーム",
+	"addpersonalurls-home-preload": "あなたは、このページをあなたのホームページのように使うことができます。",
 	"addpersonalurls-favorites": "お気に入り",
 	"addpersonalurls-sandbox": "サンドボックス",
-	"addpersonalurls-notes": "注釈"
+	"addpersonalurls-sandbox-preload": "あなたは、このページをソースコードのテストに使うことができます。",
+	"addpersonalurls-notes": "注釈",
+	"addpersonalurls-notes-preload": "あなたは、このページをメモとしと使うことができます。"
 }
