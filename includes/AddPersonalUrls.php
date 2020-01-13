@@ -125,20 +125,20 @@ class AddPersonalUrls {
 	 * to the list of personal URLs.
 	 *
 	 * @param array $personal_urls The array of URLs set up so far.
-	 *
 	 * @param Title $title The Title object of the current article.
+	 * @param SkinTemplate $skin Skin template, for context
 	 *
 	 * @return bool Always TRUE.
 	 */
 
-	public function onPersonalUrls( array &$personal_urls, Title $title ) {
-		global $wgUser;
+	public function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
 		global $wgAddPersonalUrlsTable;
 
-		$username = $wgUser->getName();
+		$user = $skin->getUser();
+		$username = $user->getName();
 
 		/** Consider logged-in users only. */
-		if ( $wgUser->getID() ) {
+		if ( $user->getID() ) {
 			$pageurl = $title->getLocalURL();
 
 			/** Extract link to user page in order to keep it as first
