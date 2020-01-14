@@ -99,7 +99,8 @@ class AddPersonalUrls {
 			. strtolower( $title->getSubpageText() ) . '-preload' );
 
 		/** If the page-specific message does not exist, do not
-		 *	preload anything. */
+		 *	preload anything.
+		 */
 		if ( !$msg1->exists() ) {
 			return true;
 		}
@@ -142,13 +143,15 @@ class AddPersonalUrls {
 			$pageurl = $title->getLocalURL();
 
 			/** Extract link to user page in order to keep it as first
-			 *	item. */
+			 *	item.
+			 */
 			$urls = [ 'userpage' => array_shift( $personal_urls ) ];
 
 			foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
 				/** Ignore items were the target is unset. This allows
 				 * to remove in `LocalSettings.php` items defined in
-				 * extension.json. */
+				 * extension.json.
+				 */
 				if ( !isset( $url ) ) {
 					continue;
 				}
@@ -157,7 +160,8 @@ class AddPersonalUrls {
 				$url = str_replace( '$username', $username, $url );
 
 				/** Setup URL details, distinguishing between internal
-				 *	and external links. */
+				 *	and external links.
+				 */
 				if ( strpos( $url, '://' ) !== false ) {
 					$href = $url;
 					$class = 'external text';
@@ -175,7 +179,8 @@ class AddPersonalUrls {
 
 					/** If a page does not exist and is not a special
 					 *	page, open it for editing and format it as a
-					 *	link to a new page. */
+					 *	link to a new page.
+					 */
 					if ( !$exists ) {
 						$urlaction = 'action=edit';
 						$class = 'new';
