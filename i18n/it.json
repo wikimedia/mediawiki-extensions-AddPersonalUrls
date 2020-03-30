@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"RV1971"
+			"RV1971",
+			"Fierodelveneto"
 		]
 	},
 	"addpersonalurls-desc": "Aggiunge degli elementi agli URL personali",
@@ -11,7 +12,7 @@
 	"addpersonalurls-home-preload": "Puoi utilizzare questa pagina come homepage personale.",
 	"addpersonalurls-favorites": "favoriti",
 	"addpersonalurls-favorites-preload": "Puoi utilizzare questa pagina per salvare i tuoi favoriti.",
-	"addpersonalurls-sandbox": "sandbox",
+	"addpersonalurls-sandbox": "Sandbox",
 	"addpersonalurls-sandbox-preload": "Puoi utilizzare questa pagina per effetuare delle prove.",
 	"addpersonalurls-notes": "appunti",
 	"addpersonalurls-notes-preload": "Puoi utilizzare questa pagina per appunti personali."
