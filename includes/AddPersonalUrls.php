@@ -125,7 +125,7 @@ class AddPersonalUrls {
 	 * This is the core of the extension which actually adds the URLs
 	 * to the list of personal URLs.
 	 *
-	 * @param array $personal_urls The array of URLs set up so far.
+	 * @param array &$personal_urls The array of URLs set up so far.
 	 * @param Title $title The Title object of the current article.
 	 * @param SkinTemplate $skin Skin template, for context
 	 *
