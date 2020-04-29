@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseba"
+			"Joseba",
+			"Manex"
 		]
 	},
+	"addpersonalurls-desc": "Gehitu gauza batzuk URL pertsonalei",
+	"addpersonalurls-userpages": "Nire orrialdeak",
 	"addpersonalurls-home": "Hasiera",
 	"addpersonalurls-home-preload": "orrialde hau zure hasiera orrialde pertsonal moduan erabil dezakezu",
 	"addpersonalurls-favorites": "Gogokoenak",
