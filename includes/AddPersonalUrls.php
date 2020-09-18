@@ -27,6 +27,8 @@ class AddPersonalUrls {
 	 * derived classes as well. All derived classes would use the same
 	 * instance stored here, which is OK because we will never need
 	 * more than one.
+	 *
+	 * @return AddPersonalUrls
 	 */
 	public static function &singleton() {
 		static $instance;
@@ -131,7 +133,6 @@ class AddPersonalUrls {
 	 *
 	 * @return bool Always TRUE.
 	 */
-
 	public function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
 		global $wgAddPersonalUrlsTable;
 
