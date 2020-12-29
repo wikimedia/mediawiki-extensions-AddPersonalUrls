@@ -166,6 +166,7 @@ class AddPersonalUrls {
 				if ( strpos( $url, '://' ) !== false ) {
 					$href = $url;
 					$class = 'external text';
+					$active = false;
 				} else {
 					/** Split the URL at '?', if any. */
 					$components = explode( '?', $url, 2 );
@@ -177,6 +178,7 @@ class AddPersonalUrls {
 					Skin::checkTitle( $linkedTitle, $name );
 					$exists = $linkedTitle->getArticleID() != 0
 						|| $linkedTitle->isSpecialPage();
+					$href = $linkedTitle->getLocalURL( $urlaction );
 
 					/** If a page does not exist and is not a special
 					 *	page, open it for editing and format it as a
@@ -185,17 +187,20 @@ class AddPersonalUrls {
 					if ( !$exists ) {
 						$urlaction = 'action=edit';
 						$class = 'new';
+						$active = $linkedTitle->getLocalURL() == $pageurl;
+					} else {
+						$class = null;
+						$active = $href == $pageurl;
 					}
-
-					$href = $linkedTitle->getLocalURL( $urlaction );
-
-					$active = ( isset( $class ) && $class == 'new' )
-						? $linkedTitle->getLocalURL() == $pageurl
-						: $href == $pageurl;
 				}
 
 				$text = wfMessage( $id )->text();
-				$urls[$id] = compact( 'text', 'href', 'active', 'class' );
+				$urls[$id] = [
+					'text' => $text,
+					'href' => $href,
+					'active' => $active,
+					'class' => $class,
+				];
 			}
 
 			/** Prepend new URLs to existing ones. */
