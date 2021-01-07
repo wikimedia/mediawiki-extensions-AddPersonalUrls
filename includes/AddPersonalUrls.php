@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @brief Code for the @ref Extensions-AddPersonalUrls.
+ * Code for the @ref Extensions-AddPersonalUrls.
  *
  * @file
  *
@@ -13,7 +13,7 @@
  */
 
 /**
- * @brief Class implementing the @ref Extensions-AddPersonalUrls.
+ * Class implementing the @ref Extensions-AddPersonalUrls.
  *
  * @ingroup Extensions-AddPersonalUrls
  */
@@ -21,7 +21,7 @@ class AddPersonalUrls {
 	/* == public static methods == */
 
 	/**
-	 * @brief Get an instance of this class.
+	 * Get an instance of this class.
 	 *
 	 * Due to the use of late static binding, the mechanism works for
 	 * derived classes as well. All derived classes would use the same
@@ -41,7 +41,7 @@ class AddPersonalUrls {
 	}
 
 	/**
-	 * @brief Initialize this extension.
+	 * Initialize this extension.
 	 */
 	public static function init() {
 		global $wgHooks;
@@ -54,8 +54,8 @@ class AddPersonalUrls {
 	/* == hooks == */
 
 	/**
-	 * @brief [BeforePageDisplay]
-	 * (https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay) hook.
+	 * BeforePageDisplay hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
 	 * Add the [Resource Modules]
 	 * (https://www.mediawiki.org/wiki/$wgResourceModules) to the page.
@@ -74,11 +74,11 @@ class AddPersonalUrls {
 	}
 
 	/**
-	 * @brief [EditFormPreloadText]
-	 * (https://www.mediawiki.org/wiki/Manual:Hooks/EditFormPreloadText) hook.
+	 * EditFormPreloadText hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/EditFormPreloadText
 	 *
-	 * Preload text when creating new pages in the User namespace. See
-	 * @ref $wgAddPersonalUrlsTable for an explanation how the text is
+	 * Preload text when creating new pages in the User namespace.
+	 * See @ref $wgAddPersonalUrlsTable for an explanation how the text is
 	 * composed.
 	 *
 	 * @param string &$text Text to prefill edit form with.
@@ -121,8 +121,8 @@ class AddPersonalUrls {
 	}
 
 	/**
-	 * @brief [PersonalUrls]
-	 * (https://www.mediawiki.org/wiki/Manual:Hooks/PersonalUrls) hook.
+	 * PersonalUrls hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PersonalUrls
 	 *
 	 * This is the core of the extension which actually adds the URLs
 	 * to the list of personal URLs.
