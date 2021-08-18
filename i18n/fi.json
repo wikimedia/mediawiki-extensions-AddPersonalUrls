@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MITO",
 			"Pyscowicz"
 		]
 	},
@@ -8,5 +9,7 @@
 	"addpersonalurls-home": "Koti",
 	"addpersonalurls-favorites": "Suosikit",
 	"addpersonalurls-sandbox": "Hiekkalaatikko",
-	"addpersonalurls-sandbox-preload": "Voit käyttää tätä sivua wikikoodin testaamiseen."
+	"addpersonalurls-sandbox-preload": "Voit käyttää tätä sivua wikikoodin testaamiseen.",
+	"addpersonalurls-notes": "Huomautukset",
+	"addpersonalurls-notes-preload": "Voit käyttää tätä sivua henkilökohtaisiin huomautuksiisi."
 }
