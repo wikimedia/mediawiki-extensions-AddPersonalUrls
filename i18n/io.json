@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"JSantos",
 			"Joao Xavier"
 		]
 	},
-	"addpersonalurls-home": "Komenco"
+	"addpersonalurls-home": "Komenco",
+	"addpersonalurls-notes": "Noti"
 }
