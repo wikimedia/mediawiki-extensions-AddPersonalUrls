@@ -3,11 +3,12 @@
 		"authors": [
 			"Carlosmg.dg",
 			"Fitoschido",
+			"Jakeukalane",
 			"Mynor Archila"
 		]
 	},
 	"addpersonalurls-desc": "Añadir algunos elementos a los URL personales",
-	"addpersonalurls-preload": "Funciona como cualquier otra página del wiki; en concreto, otros usuarios pueden verla o modificarla.",
+	"addpersonalurls-preload": "Funciona como cualquier otra página de la wiki; en concreto, otros usuarios pueden verla o modificarla.",
 	"addpersonalurls-userpages": "Mis páginas",
 	"addpersonalurls-home": "Inicio",
 	"addpersonalurls-home-preload": "Puedes utilizar esta página como tu página de inicio personal.",
