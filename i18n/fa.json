@@ -3,7 +3,8 @@
 		"authors": [
 			"Amir1arch",
 			"Amirsara",
-			"FarsiNevis"
+			"FarsiNevis",
+			"Jeeputer"
 		]
 	},
 	"addpersonalurls-userpages": "صفحات  من",
@@ -12,6 +13,7 @@
 	"addpersonalurls-favorites": "علاقه مندی ها",
 	"addpersonalurls-favorites-preload": "شما می‌توانید از این صفحه برای نگهداری علاقه‌مندی‌هایتان استفاده کنید.",
 	"addpersonalurls-sandbox": "صفحهٔ تمرین",
+	"addpersonalurls-sandbox-preload": "می‌توانید از این صفحه برای آزمودن کد ویکی استفاده کنید.",
 	"addpersonalurls-notes": "یادداشت‌ها",
 	"addpersonalurls-notes-preload": "شما می‌توانید از این صفحه برای یاداشت‌های شخصی‌تان استفاده کنید."
 }
