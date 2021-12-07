@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hidayatsrf",
-			"J Nia30"
+			"J Nia30",
+			"Shinkiwa"
 		]
 	},
 	"addpersonalurls-userpages": "Halaman saya",
@@ -10,5 +11,6 @@
 	"addpersonalurls-home-preload": "Anda dapat menggunakan halaman ini sebagaihalaman beranda pribadi.",
 	"addpersonalurls-favorites": "Favorit",
 	"addpersonalurls-sandbox": "Bak pasir",
+	"addpersonalurls-sandbox-preload": "Anda dapat menggunakan halaman ini untuk uji coba kode wiki.",
 	"addpersonalurls-notes": "Catatan"
 }
