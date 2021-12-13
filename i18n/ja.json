@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abijeet Patro",
 			"Aefgh39622",
 			"Suchichi02",
 			"マツムシ",
-			"神樂坂秀吉"
+			"神樂坂秀吉",
+			"LaMagiaaa",
+			"Shirayuki"
 		]
 	},
 	"addpersonalurls-desc": "個人用URLにいくつかの項目を追加します",
@@ -18,5 +19,5 @@
 	"addpersonalurls-sandbox": "サンドボックス",
 	"addpersonalurls-sandbox-preload": "あなたは、このページをソースコードのテストに使うことができます。",
 	"addpersonalurls-notes": "注釈",
-	"addpersonalurls-notes-preload": "あなたは、このページをメモとしと使うことができます。"
+	"addpersonalurls-notes-preload": "あなたは、このページをメモとして使用できます。"
 }
