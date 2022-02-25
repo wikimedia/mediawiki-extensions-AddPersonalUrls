@@ -175,7 +175,9 @@ class AddPersonalUrls {
 						? $components[1] : null;
 
 					$linkedTitle = Title::newFromText( $name );
-					Skin::checkTitle( $linkedTitle, $name );
+					if ( !$linkedTitle ) {
+						continue;
+					}
 					$exists = $linkedTitle->getArticleID() != 0
 						|| $linkedTitle->isSpecialPage();
 					$href = $linkedTitle->getLocalURL( $urlaction );
@@ -185,13 +187,12 @@ class AddPersonalUrls {
 					 *	link to a new page.
 					 */
 					if ( !$exists ) {
-						$urlaction = 'action=edit';
+						$href = $linkedTitle->getLocalURL( 'action=edit' );
 						$class = 'new';
-						$active = $linkedTitle->getLocalURL() == $pageurl;
 					} else {
 						$class = null;
-						$active = $href == $pageurl;
 					}
+					$active = $href == $pageurl;
 				}
 
 				$text = wfMessage( $id )->text();
