@@ -4,12 +4,13 @@
 			"Amir1arch",
 			"Amirsara",
 			"FarsiNevis",
-			"Jeeputer"
+			"Jeeputer",
+			"Beginneruser"
 		]
 	},
 	"addpersonalurls-desc": "افزودن چند مورد به نشانی‌های شخصی",
 	"addpersonalurls-preload": "این صفحه مشابه هر ویکی‌صفحهٔ دیگری است؛ به عبارت دیگر، کاربران دیگر نیز قادر به مشاهده یا ویرایش آن هستند.",
-	"addpersonalurls-userpages": "صفحات  من",
+	"addpersonalurls-userpages": "صفحه‌های من",
 	"addpersonalurls-home": "صفحه اصلی",
 	"addpersonalurls-home-preload": "شما می توانید از این صفحه برای صفحه اصلی شخصی تان استفاده کنید.",
 	"addpersonalurls-favorites": "علاقه مندی ها",
