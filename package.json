@@ -1,4 +1,5 @@
 {
+	"name": "AddPersonalUrls",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
