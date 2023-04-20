@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"addpersonalurls-desc": "Pridėkite keletą elementų prie asmeninių URL",
+	"addpersonalurls-preload": "Tai veikia kaip bet kuris kitas viki puslapis; visų pirma, kiti naudotojai gali jį matyti ar redaguoti.",
+	"addpersonalurls-userpages": "Mano puslapiai",
+	"addpersonalurls-home": "Pradžia",
+	"addpersonalurls-home-preload": "Šį puslapį galite naudoti kaip savo asmeninį pagrindinį puslapį.",
+	"addpersonalurls-favorites": "Mėgstamiausi",
+	"addpersonalurls-favorites-preload": "Šiame puslapyje galite išsaugoti savo mėgstamiausius.",
+	"addpersonalurls-sandbox": "Smėlio dėžė",
+	"addpersonalurls-sandbox-preload": "Šį puslapį galite naudoti norėdami išbandyti vikį kodą.",
+	"addpersonalurls-notes": "Užrašai",
+	"addpersonalurls-notes-preload": "Šį puslapį galite naudoti savo asmeniniams užrašams."
+}
