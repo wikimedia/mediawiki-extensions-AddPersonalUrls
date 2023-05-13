@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
+
 /**
  * Code for the @ref Extensions-AddPersonalUrls.
  *
@@ -79,24 +81,25 @@ class AddPersonalUrls {
 	}
 
 	/**
-	 * PersonalUrls hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PersonalUrls
+	 * SkinTemplateNavigation::Universal hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateNavigation::Universal
 	 *
 	 * This is the core of the extension which actually adds the URLs
 	 * to the list of personal URLs.
 	 *
-	 * @param array &$personal_urls The array of URLs set up so far.
-	 * @param Title $title The Title object of the current article.
-	 * @param SkinTemplate $skin Skin template, for context
+	 * @param SkinTemplate $sktemplate
+	 * @param array &$links
 	 */
-	public static function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
+	public static function onSkinTemplateNavigation__Universal( $sktemplate, &$links ) {
 		global $wgAddPersonalUrlsTable;
 
-		$user = $skin->getUser();
+		$user = $sktemplate->getUser();
 		$username = $user->getName();
 
 		/** Consider logged-in users only. */
 		if ( $user->getID() ) {
+			$personal_urls = &$links['user-menu'];
+			$title = $sktemplate->getTitle();
 			$pageurl = $title->getLocalURL();
 
 			/** Extract link to user page in order to keep it as first
@@ -151,7 +154,7 @@ class AddPersonalUrls {
 					$active = $href == $pageurl;
 				}
 
-				$text = wfMessage( $id )->text();
+				$text = $sktemplate->msg( $id )->text();
 				$urls[$id] = [
 					'text' => $text,
 					'href' => $href,
