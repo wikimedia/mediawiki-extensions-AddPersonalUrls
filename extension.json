@@ -24,7 +24,11 @@
 		"localBasePath": "resources/css",
 		"remoteExtPath": "AddPersonalUrls/resources/css"
 	},
-	"ExtensionFunctions": [ "AddPersonalUrls::init" ],
+	"Hooks": {
+		"BeforePageDisplay": "AddPersonalUrls::onBeforePageDisplay",
+		"EditFormPreloadText": "AddPersonalUrls::onEditFormPreloadText",
+		"PersonalUrls": "AddPersonalUrls::onPersonalUrls"
+	},
 	"MessagesDirs": {
 		"AddPersonalUrls": [
 			"i18n"

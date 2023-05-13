@@ -18,40 +18,6 @@
  * @ingroup Extensions-AddPersonalUrls
  */
 class AddPersonalUrls {
-	/* == public static methods == */
-
-	/**
-	 * Get an instance of this class.
-	 *
-	 * Due to the use of late static binding, the mechanism works for
-	 * derived classes as well. All derived classes would use the same
-	 * instance stored here, which is OK because we will never need
-	 * more than one.
-	 *
-	 * @return AddPersonalUrls
-	 */
-	public static function &singleton() {
-		static $instance;
-
-		if ( !isset( $instance ) ) {
-			$instance = new static;
-		}
-
-		return $instance;
-	}
-
-	/**
-	 * Initialize this extension.
-	 */
-	public static function init() {
-		global $wgHooks;
-
-		$wgHooks['BeforePageDisplay'][] = self::singleton();
-		$wgHooks['EditFormPreloadText'][] = self::singleton();
-		$wgHooks['PersonalUrls'][] = self::singleton();
-	}
-
-	/* == hooks == */
 
 	/**
 	 * BeforePageDisplay hook handler
@@ -64,13 +30,9 @@ class AddPersonalUrls {
 	 *
 	 * @param Skin &$skin Skin object that will be used to
 	 * generate the page.
-	 *
-	 * @return bool Always TRUE.
 	 */
-	public function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$out->addModules( 'ext.addPersonalUrls' );
-
-		return true;
 	}
 
 	/**
@@ -84,17 +46,15 @@ class AddPersonalUrls {
 	 * @param string &$text Text to prefill edit form with.
 	 *
 	 * @param Title &$title Title of new page (Title Object).
-	 *
-	 * @return bool Always TRUE.
 	 */
-	public function onEditFormPreloadText( &$text, Title &$title ) {
+	public static function onEditFormPreloadText( &$text, Title &$title ) {
 		if ( $title->getNamespace() != NS_USER ) {
-			return true;
+			return;
 		}
 
 		/** Skip if there is already another preload text. */
 		if ( $text ) {
-			return true;
+			return;
 		}
 
 		$msg1 = wfMessage( 'addpersonalurls-'
@@ -104,7 +64,7 @@ class AddPersonalUrls {
 		 *	preload anything.
 		 */
 		if ( !$msg1->exists() ) {
-			return true;
+			return;
 		}
 
 		$msg2 = wfMessage( 'addpersonalurls-preload' );
@@ -116,8 +76,6 @@ class AddPersonalUrls {
 		}
 
 		$text .= "{$msg2->text()} -->";
-
-		return true;
 	}
 
 	/**
@@ -130,10 +88,8 @@ class AddPersonalUrls {
 	 * @param array &$personal_urls The array of URLs set up so far.
 	 * @param Title $title The Title object of the current article.
 	 * @param SkinTemplate $skin Skin template, for context
-	 *
-	 * @return bool Always TRUE.
 	 */
-	public function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
+	public static function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
 		global $wgAddPersonalUrlsTable;
 
 		$user = $skin->getUser();
@@ -207,7 +163,5 @@ class AddPersonalUrls {
 			/** Prepend new URLs to existing ones. */
 			$personal_urls = $urls + $personal_urls;
 		}
-
-		return true;
 	}
 }
