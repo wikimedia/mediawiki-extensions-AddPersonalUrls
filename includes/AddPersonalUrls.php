@@ -14,12 +14,20 @@
  *
  */
 
+use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Hook\EditFormPreloadTextHook;
+use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+
 /**
  * Class implementing the @ref Extensions-AddPersonalUrls.
  *
  * @ingroup Extensions-AddPersonalUrls
  */
-class AddPersonalUrls {
+class AddPersonalUrls implements
+	BeforePageDisplayHook,
+	EditFormPreloadTextHook,
+	SkinTemplateNavigation__UniversalHook
+{
 
 	/**
 	 * BeforePageDisplay hook handler
@@ -28,12 +36,10 @@ class AddPersonalUrls {
 	 * Add the [Resource Modules]
 	 * (https://www.mediawiki.org/wiki/$wgResourceModules) to the page.
 	 *
-	 * @param OutputPage &$out The OutputPage object.
-	 *
-	 * @param Skin &$skin Skin object that will be used to
-	 * generate the page.
+	 * @param OutputPage $out
+	 * @param Skin $skin
 	 */
-	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.addPersonalUrls' );
 	}
 
@@ -46,38 +52,25 @@ class AddPersonalUrls {
 	 * composed.
 	 *
 	 * @param string &$text Text to prefill edit form with.
-	 *
-	 * @param Title &$title Title of new page (Title Object).
+	 * @param Title $title
 	 */
-	public static function onEditFormPreloadText( &$text, Title &$title ) {
-		if ( $title->getNamespace() != NS_USER ) {
-			return;
-		}
-
+	public function onEditFormPreloadText( &$text, $title ) {
 		/** Skip if there is already another preload text. */
-		if ( $text ) {
+		if ( $text || $title->getNamespace() !== NS_USER ) {
 			return;
 		}
 
 		$msg1 = wfMessage( 'addpersonalurls-'
 			. strtolower( $title->getSubpageText() ) . '-preload' );
 
-		/** If the page-specific message does not exist, do not
-		 *	preload anything.
-		 */
+		// If the page-specific message does not exist, do not preload anything.
 		if ( !$msg1->exists() ) {
 			return;
 		}
 
 		$msg2 = wfMessage( 'addpersonalurls-preload' );
 
-		$text = "<!-- {$msg1->text()}";
-
-		if ( $msg1->text() !== '' && $msg2->text() !== '' ) {
-			$text .= "\n\n";
-		}
-
-		$text .= "{$msg2->text()} -->";
+		$text = '<!-- ' . trim( $msg1->text() . "\n\n" . $msg2->text() ) . ' -->';
 	}
 
 	/**
@@ -90,81 +83,77 @@ class AddPersonalUrls {
 	 * @param SkinTemplate $sktemplate
 	 * @param array &$links
 	 */
-	public static function onSkinTemplateNavigation__Universal( $sktemplate, &$links ) {
+	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
 		global $wgAddPersonalUrlsTable;
 
 		$user = $sktemplate->getUser();
 		$username = $user->getName();
 
 		/** Consider logged-in users only. */
-		if ( $user->getID() ) {
-			$personal_urls = &$links['user-menu'];
-			$title = $sktemplate->getTitle();
-			$pageurl = $title->getLocalURL();
+		if ( !$user->isNamed() ) {
+			return;
+		}
 
-			/** Extract link to user page in order to keep it as first
-			 *	item.
+		$personal_urls = &$links['user-menu'];
+		$title = $sktemplate->getTitle();
+		$pageurl = $title->getLocalURL();
+
+		/** Extract link to user page in order to keep it as first
+		 *	item.
+		 */
+		$urls = [ 'userpage' => array_shift( $personal_urls ) ];
+
+		foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
+			/** Ignore items were the target is unset. This allows
+			 * to remove in `LocalSettings.php` items defined in
+			 * extension.json.
 			 */
-			$urls = [ 'userpage' => array_shift( $personal_urls ) ];
+			if ( $url === null ) {
+				continue;
+			}
 
-			foreach ( $wgAddPersonalUrlsTable as $id => $url ) {
-				/** Ignore items were the target is unset. This allows
-				 * to remove in `LocalSettings.php` items defined in
-				 * extension.json.
-				 */
-				if ( !isset( $url ) ) {
+			/** Replace $username with actual username. */
+			$url = str_replace( '$username', $username, $url );
+
+			/** Setup URL details, distinguishing between internal
+			 *	and external links.
+			 */
+			if ( strpos( $url, '://' ) !== false ) {
+				$href = $url;
+				$class = 'external text';
+				$active = false;
+			} else {
+				/** Split the URL at '?', if any. */
+				$components = explode( '?', $url, 2 );
+				$name = $components[0];
+				$urlaction = $components[1] ?? null;
+
+				$linkedTitle = Title::newFromText( $name );
+				if ( !$linkedTitle ) {
 					continue;
 				}
 
-				/** Replace $username with actual username. */
-				$url = str_replace( '$username', $username, $url );
+				$exists = $linkedTitle->isSpecialPage() || $linkedTitle->exists();
 
-				/** Setup URL details, distinguishing between internal
-				 *	and external links.
+				/** If a page does not exist and is not a special
+				 *	page, open it for editing and format it as a
+				 *	link to a new page.
 				 */
-				if ( strpos( $url, '://' ) !== false ) {
-					$href = $url;
-					$class = 'external text';
-					$active = false;
-				} else {
-					/** Split the URL at '?', if any. */
-					$components = explode( '?', $url, 2 );
-					$name = $components[0];
-					$urlaction = isset( $components[1] )
-						? $components[1] : null;
-
-					$linkedTitle = Title::newFromText( $name );
-					if ( !$linkedTitle ) {
-						continue;
-					}
-					$exists = $linkedTitle->getArticleID() != 0
-						|| $linkedTitle->isSpecialPage();
-					$href = $linkedTitle->getLocalURL( $urlaction );
-
-					/** If a page does not exist and is not a special
-					 *	page, open it for editing and format it as a
-					 *	link to a new page.
-					 */
-					if ( !$exists ) {
-						$href = $linkedTitle->getLocalURL( 'action=edit' );
-						$class = 'new';
-					} else {
-						$class = null;
-					}
-					$active = $href == $pageurl;
-				}
-
-				$text = $sktemplate->msg( $id )->text();
-				$urls[$id] = [
-					'text' => $text,
-					'href' => $href,
-					'active' => $active,
-					'class' => $class,
-				];
+				$href = $linkedTitle->getLocalURL( $exists ? $urlaction : 'action=edit' );
+				$class = $exists ? null : 'new';
+				$active = $href === $pageurl;
 			}
 
-			/** Prepend new URLs to existing ones. */
-			$personal_urls = $urls + $personal_urls;
+			$text = $sktemplate->msg( $id )->text();
+			$urls[$id] = [
+				'text' => $text,
+				'href' => $href,
+				'active' => $active,
+				'class' => $class,
+			];
 		}
+
+		/** Prepend new URLs to existing ones. */
+		$personal_urls = $urls + $personal_urls;
 	}
 }

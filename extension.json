@@ -8,7 +8,7 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:AddPersonalUrls",
 	"license-name": "GPL-3.0-or-later",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"AutoloadClasses": {
 		"AddPersonalUrls": "includes/AddPersonalUrls.php"
@@ -24,10 +24,15 @@
 		"localBasePath": "resources/css",
 		"remoteExtPath": "AddPersonalUrls/resources/css"
 	},
+	"HookHandlers": {
+		"AddPersonalUrls": {
+			"class": "AddPersonalUrls"
+		}
+	},
 	"Hooks": {
-		"BeforePageDisplay": "AddPersonalUrls::onBeforePageDisplay",
-		"EditFormPreloadText": "AddPersonalUrls::onEditFormPreloadText",
-		"SkinTemplateNavigation::Universal": "AddPersonalUrls::onSkinTemplateNavigation__Universal"
+		"BeforePageDisplay": "AddPersonalUrls",
+		"EditFormPreloadText": "AddPersonalUrls",
+		"SkinTemplateNavigation::Universal": "AddPersonalUrls"
 	},
 	"MessagesDirs": {
 		"AddPersonalUrls": [
