@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"BrennodAloisi"
+			"BrennodAloisi",
+			"Nicolas Eynaud"
 		]
 	},
-	"addpersonalurls-userpages": "Mas paginas"
+	"addpersonalurls-userpages": "Mas paginas",
+	"addpersonalurls-notes": "Nòtas"
 }
