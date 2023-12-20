@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adriendelucca",
 			"Fulup"
 		]
 	},
 	"addpersonalurls-userpages": "Ma fajennoù",
 	"addpersonalurls-home": "Degemer",
+	"addpersonalurls-favorites": "Muiañ-karet",
 	"addpersonalurls-sandbox": "Poull-traezh",
 	"addpersonalurls-notes": "Notennoù"
 }
