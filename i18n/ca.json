@@ -2,14 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Alan Mena",
-			"Fitoschido"
+			"Fitoschido",
+			"SMP"
 		]
 	},
+	"addpersonalurls-desc": "Afegeix alguns elements als URL personals",
+	"addpersonalurls-preload": "Funciona com qualsevol altra pàgina wiki, en particular els altres usuaris poden veure-a i editar-la.",
 	"addpersonalurls-userpages": "Les meves pàgines",
 	"addpersonalurls-home": "Inici",
+	"addpersonalurls-home-preload": "Podeu usar aquesta pàgina com a pàgina d'inici personal.",
 	"addpersonalurls-favorites": "Preferits",
 	"addpersonalurls-favorites-preload": "Pots utilitzar aquesta pàgina per emmagatzemar els vostres preferits.",
 	"addpersonalurls-sandbox": "Proves",
+	"addpersonalurls-sandbox-preload": "Podeu utilitzar aquesta pàgina per a provar codi wiki.",
 	"addpersonalurls-notes": "Notes",
 	"addpersonalurls-notes-preload": "Podeu fer servir aquesta pàgina per a les vostres notes personals."
 }
