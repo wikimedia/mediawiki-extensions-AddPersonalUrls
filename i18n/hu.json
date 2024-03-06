@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"R-Joe"
+			"R-Joe",
+			"Dj"
 		]
 	},
+	"addpersonalurls-userpages": "Lapjaim",
+	"addpersonalurls-home": "Kezdőlap",
 	"addpersonalurls-sandbox": "Homokozó",
 	"addpersonalurls-sandbox-preload": "Ezt az oldalt a wiki kód tesztelésére használhatja.",
 	"addpersonalurls-notes": "Megjegyzések",
