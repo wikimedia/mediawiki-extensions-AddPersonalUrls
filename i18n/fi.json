@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Samoasambia"
 		]
 	},
 	"addpersonalurls-userpages": "Omat sivut",
 	"addpersonalurls-home": "Koti",
+	"addpersonalurls-home-preload": "Voit käyttää tätä sivua henkilökohtaisena kotisivunasi.",
 	"addpersonalurls-favorites": "Suosikit",
 	"addpersonalurls-sandbox": "Hiekkalaatikko",
 	"addpersonalurls-sandbox-preload": "Voit käyttää tätä sivua wikikoodin testaamiseen.",
