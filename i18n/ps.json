@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"addpersonalurls-desc": "ځاني وېبتړونو ته يو څه توکي ورگډول",
+	"addpersonalurls-preload": "دا د نورو ويکي‌مخونو په څېر کار کوي؛ په ځانگړې توگه، نور کارنان کولی شي دا وگوري يا يې سم کړي.",
+	"addpersonalurls-userpages": "زما مخونه",
+	"addpersonalurls-home": "کور",
+	"addpersonalurls-home-preload": "تاسو کولی شئ، دا مخ د خپلې ځاني کور پاڼې په توگه وکاروئ.",
+	"addpersonalurls-favorites": "خواپورې",
+	"addpersonalurls-favorites-preload": "تاسو کولی شئ دا مخ د خپلو خواپورو د خونديځولو لپاره وکاروئ.",
+	"addpersonalurls-sandbox": "ازمون‌مخ",
+	"addpersonalurls-sandbox-preload": "تاسو کولی شئ دا مخ د ويکي کوډ ازمايلو لپاره وکاروئ.",
+	"addpersonalurls-notes": "يادښتونه",
+	"addpersonalurls-notes-preload": "تاسو کولی شئ، دا مخ د خپلو ځاني يادښتونو لپاره وکاروئ."
+}
