@@ -17,6 +17,7 @@
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\EditFormPreloadTextHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+use MediaWiki\Title\Title;
 
 /**
  * Class implementing the @ref Extensions-AddPersonalUrls.
