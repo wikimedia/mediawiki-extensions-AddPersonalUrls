@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"addpersonalurls-userpages": "Meng Säiten",
@@ -9,7 +10,7 @@
 	"addpersonalurls-home-preload": "Dir kënnt dës Säit als Är perséinlech Homepage benotzen.",
 	"addpersonalurls-favorites": "Favoritten",
 	"addpersonalurls-favorites-preload": "Dir kënnt dës Säit benotze fir Är Favoritten ze späicheren.",
-	"addpersonalurls-sandbox": "Sandkëscht",
+	"addpersonalurls-sandbox": "Sandkaul",
 	"addpersonalurls-sandbox-preload": "Dir kënnt dës säit benotze fir Wiki-Code ze testen.",
 	"addpersonalurls-notes": "Notizen",
 	"addpersonalurls-notes-preload": "Dir kënnt dës Säit fir Är perséinlech Notize benotzen."
