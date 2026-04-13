@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chaduvari",
 			"Veeven"
 		]
 	},
 	"addpersonalurls-userpages": "నా పేజీలు",
 	"addpersonalurls-home": "ముంగిలి",
+	"addpersonalurls-sandbox": "ప్రయోగశాల",
 	"addpersonalurls-notes": "గమనికలు"
 }
