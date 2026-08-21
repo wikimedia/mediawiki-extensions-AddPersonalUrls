@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"addpersonalurls-desc": "Ku dar waxyaabo URL-yada gaarka ah",
+	"addpersonalurls-preload": "Waxay u shaqaysaa sida bog kasta oo kale oo wiki ah; gaar ahaan, isticmaalayaasha kale ayaa laga yaabaa inay awoodaan inay arkaan ama wax ka beddelaan.",
+	"addpersonalurls-userpages": "Boggageyga",
+	"addpersonalurls-home": "Bogga Hore",
+	"addpersonalurls-home-preload": "Waxaad boggan u isticmaali kartaa inuu noqdo boggaaga hore ee gaarka ah.",
+	"addpersonalurls-favorites": "Kuwa la jecel yahay",
+	"addpersonalurls-favorites-preload": "Waxaad boggan u isticmaali kartaa inaad ku kaydiso kuwa aad jeceshahay.",
+	"addpersonalurls-sandbox": "Bacaadka",
+	"addpersonalurls-sandbox-preload": "Waxaad boggan u isticmaali kartaa inaad ku tijaabiso koodhka wiki.",
+	"addpersonalurls-notes": "Qoraallo",
+	"addpersonalurls-notes-preload": "Waxaad boggan u isticmaali kartaa qoraalladaada gaarka ah."
+}
