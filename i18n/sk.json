@@ -1,12 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Wizzard"
 		]
 	},
+	"addpersonalurls-desc": "Pridáva niekoľko položiek medzi osobné odkazy",
+	"addpersonalurls-preload": "Funguje ako každá iná wiki stránka; najmä ju môžu vidieť alebo upravovať aj iní používatelia.",
 	"addpersonalurls-userpages": "Moje stránky",
 	"addpersonalurls-home": "Domov",
+	"addpersonalurls-home-preload": "Túto stránku môžete použiť ako svoju osobnú domovskú stránku.",
 	"addpersonalurls-favorites": "Obľúbené",
+	"addpersonalurls-favorites-preload": "Túto stránku môžete použiť na ukladanie svojich obľúbených položiek.",
 	"addpersonalurls-sandbox": "Pieskovisko",
-	"addpersonalurls-notes": "Poznámky"
+	"addpersonalurls-sandbox-preload": "Túto stránku môžete použiť na testovanie wiki kódu.",
+	"addpersonalurls-notes": "Poznámky",
+	"addpersonalurls-notes-preload": "Túto stránku môžete použiť na svoje osobné poznámky."
 }
