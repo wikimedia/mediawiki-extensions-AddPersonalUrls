@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dr Lotus Black"
+			"Dr Lotus Black",
+			"Kalixlouiis"
 		]
 	},
+	"addpersonalurls-desc": "ကိုယ်ပိုင် URL များတွင် item များကို ထည့်သွင်းရန်",
 	"addpersonalurls-preload": "ဤသည် အခြားဝီကီစာမျက်နှာကဲ့သို့ လုပ်ဆောင်သည်၊ အခြားသောအသုံးပြုသူများကလည်း မြင်နိုင် (သို့) ပြင်ဆင်နိုင်ပါသည်။",
 	"addpersonalurls-userpages": "ကျွန်ုပ် စာမျက်နှာများ",
 	"addpersonalurls-home": "ပင်မ",
